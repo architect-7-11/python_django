@@ -1,0 +1,148 @@
+{%extends "layout.html" %}
+{% load static %}
+
+
+
+{% block body %}
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giriş söayfası</title>
+
+    <style>
+        .navbar{
+            opacity: 0.8;
+            border-bottom: 1px solid #fff;
+        }
+        .jumbotron{
+            padding-top: 100px;
+        }
+        .card-img-top{
+            height:200px; 
+            width:auto; 
+            object-fit:cover;
+        }
+        .bilgiler{
+            display: flex;
+            justify-content: space-between;
+        }
+        .card-img-top{
+            height:250px; 
+            width:auto; 
+            object-fit:cover;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <header class="bilgiler">
+
+            <img src="{% static 'img/meyveler.jpg' %}" class="card-img-top img-thumbnail m-2"  style="float:left; width:300px; display:border-box;">
+
+            <div class="bilgi2" style="">
+                <h4 class="card-title">Tropikal Meyveler</h4>
+                <p>Ilıman iklime sahip olan ve sene boyunca bol yağış alan tropikal bölgeler, yeryüzünün yaklaşık olarak yüzde 40'ını kaplar. Ve bu bölgelerde endemik olarak yetişen, tadıyla gönülleri fetheden birçok bitki mevcuttur. Bizim de çok iyi bildiğimiz muz, ananas ve mango dünya çapında en çok tanınan tropikal meyvelerdir. Özellikle mineral, vitamin ve karbonhidrat açısından zengin olan tropikal meyveler sağlıklı beslenme açısından da oldukça faydalıdır. Zengin besin kaynağına sahip bu meyveler, ülkemizde günden güne popülerliğini arttırıyor. Artık muz ve ananas dışında ejder mevvesi suyu içiyor ya da kumkuat tüketiyoruz... Daha çok Antalya, Alanya ve Gazipaşa gibi sıcak iklimlerde yetişen Türkiye'deki tropikal meyveler, son yıllarda ekonomik olarak da önemli bir değere ulaşmak üzere. Peki gün geçtikçe daha çok evimize giren ve Türkiye'de üretilen bu tropikal meyveler neler; gelin daha yakından göz atalım.</p>
+            </div>
+
+    </header>
+
+    <main>
+        <div class="container">
+        <div class="card-header">
+                            <h5>Ürünler</h5>
+            <div class="card-deck">  
+
+                        <div class="card mb-3 bg-light mx-1" >
+                            <img class="card-img-top" src="{% static 'img/avakadoCard.jpg' %}">
+                            <div class="card-body">
+                                <h5 class="card-title">AVAKADO</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quisquam incidunt placeat, unde officia?</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">ÇEŞİTLERİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">EKİM VE AŞILAMA</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GIDA TAKVİYESİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GÜNCEL BİLGİLER</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card mb-3 mx-1" >
+                            <img class="card-img-top" src="{% static 'img/muz.jpg' %}">
+                            <div class="card-body">
+                                <h5 class="card-title">MUZ</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quisquam incidunt placeat, unde officia?</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">ÇEŞİTLERİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">EKİM ZAMANI</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GIDA TAKVİYESİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GÜNCEL BİLGİLER</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card mb-3 mx-1" >
+                            <img class="card-img-top" src="{% static 'img/avakadoCard.jpg' %}">
+                            <div class="card-body">
+                                <h5 class="card-title">EJDER MEYVESİ</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quisquam incidunt placeat, unde officia?</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">ÇEŞİTLERİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GIDA TAKVİYESİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GÜNCEL BİLGİLER</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card mb-3 mx-1" >
+                            <img class="card-img-top" src="{% static 'img/avakadoCard.jpg' %}" >
+                            <div class="card-body">
+                                <h5 class="card-title">MANGO</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quisquam incidunt placeat, unde officia?</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">ÇEŞİTLERİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GIDA TAKVİYESİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GÜNCEL BİLGİLER</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card mb-3 mx-1" >
+                            <img class="card-img-top" src="{% static 'img/pasiflora.jpg' %}">
+                            <div class="card-body">
+                                <h5 class="card-title">PASİFLORA</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore quisquam incidunt placeat, unde officia?</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">ÇEŞİTLERİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">EKİM VE AŞILAMA</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GIDA TAKVİYESİ</a></li>
+                                <li class="list-group-item"><a href="{% url 'article:articles' %}">GÜNCEL BİLGİLER</a></li>
+                            </ul>
+                        </div>
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+</html>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

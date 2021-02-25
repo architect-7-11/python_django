@@ -1,0 +1,45 @@
+
+{% load static %}
+
+    <nav class="navbar bg-success navbar-expand-sm navbar-dark fixed-top">
+        <div class="container">
+            <a href="{% url 'index' %}" class="navbar-brand"><img src="{% static 'img/logo.jpg' %}" style="height: 45px;"> Tropik Meyve Rehberi</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+
+          {% if request.user.is_authenticated %} 
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'article:dashboard' %}">Kontrol Paneli</a>
+            </li> 
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'user:logout' %}">Çıkış Yap</a>
+            </li> 
+
+          {% else %}
+
+              <li class="nav-item">
+                  <a href="{% url 'user:login' %}" class="nav-link">GİRİŞ YAP</a>
+              </li>
+              <li class="nav-item">
+                  <a href="{% url 'user:register' %}" class="nav-link">KAYIT OL</a>
+              </li>
+          {% endif %}
+              <li class="nav-item">
+                  <a href="{% url 'about' %}" class="nav-link">HAKKIMIZDA</a>
+              </li>
+          </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    
+
+
